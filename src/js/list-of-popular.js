@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const popularRecipe = document.querySelector('.js-popular-recipes');
 /*=================BACK-END===========================*/
 // serviceRecype()
@@ -30,13 +29,11 @@ async function serviceRecype() {
 }
 
 serviceRecype();
-=======
-const popularRecipe = document.querySelector('js-popular-recipe');
 
 /*=================BACK-END===========================*/
 serviceRecype() 
     .then((data) => {
-popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
+// popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
     })
     .catch(err => console.log(err))
 
@@ -52,7 +49,6 @@ popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
 });
     } 
 
->>>>>>> upstream/main
 /*=================SHOW-CARD===========================*/
 
 function createMarkupCard(arr) {
@@ -66,7 +62,4 @@ return arr.map(({preview, title, description}) => {
 }).join();
 }
 
-<<<<<<< HEAD
-popularRecipe.insertAdjacentHTML('beforeend',)
-=======
->>>>>>> upstream/main
+// popularRecipe.insertAdjacentHTML('beforeend',)
