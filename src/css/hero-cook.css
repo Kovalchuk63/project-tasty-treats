@@ -1,0 +1,43 @@
+/*
+<div class="swiper">
+<div class="events swiper-wrapper"></div>
+<div class="page"></div>
+</div>
+
+<div class="swiper">
+  <div class="swiper-wrapper"></div>
+  <div class="swiper-pagination"></div>
+</div>
+*/
+
+.events {
+  display: flex;
+}
+
+.swiper-card {
+  display: flex;
+}
+
+.cook-slide {
+  display: flex;
+}
+
+.plate-slide {
+  display: flex;
+}
+
+.plate {
+  display: flex;
+}
+
+.plate-name {
+  display: flex;
+}
+
+.plate-area {
+  display: flex;
+}
+
+.dish {
+  display: flex;
+}
