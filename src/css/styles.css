@@ -4,7 +4,10 @@
   | default @import url()
   |============================
 */
-@import url('./reset.css');
+@import url('./base/modern-normalize.css');
+@import url('./base/hidden.css');
+@import url('./base/reset.css');
+@import url('./base/scroll.css');
 
 
 :root {
