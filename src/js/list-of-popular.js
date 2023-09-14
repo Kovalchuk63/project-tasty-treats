@@ -1,12 +1,15 @@
 const popularRecipe = document.querySelector('js-popular-recipe');
+
 /*=================BACK-END===========================*/
-serviceRecype()
+serviceRecype() 
     .then((data) => {
 popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
     })
     .catch(err => console.log(err))
+
     function serviceRecype() {
         const URL =  'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
+
         return fetch(`${URL}`)
     .then((resp) => {
     if(!resp.ok) {
@@ -14,8 +17,10 @@ popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
 }
     return resp.json()
 });
-    }
+    } 
+
 /*=================SHOW-CARD===========================*/
+
 function createMarkupCard(arr) {
 return arr.map(({id,preview,title,description,popularity}) => {
     `<li class ="popular-recipe-list">
@@ -25,3 +30,4 @@ return arr.map(({id,preview,title,description,popularity}) => {
     </li>`
 }).join();
 }
+
