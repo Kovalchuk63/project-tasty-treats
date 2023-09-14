@@ -1,8 +1,9 @@
-const popularRecipe = document.querySelector('js-popular-recipe');
+const popularRecipe = document.querySelector('.js-popular-recipes');
 /*=================BACK-END===========================*/
 serviceRecype()
     .then((data) => {
-popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
+        console.log(data);
+// popularRecipe.insertAdjacentHTML('beforeend', createMarkupCard(data))
     })
     .catch(err => console.log(err))
     function serviceRecype() {
@@ -17,9 +18,10 @@ popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
     }
 /*=================SHOW-CARD===========================*/
 function createMarkupCard(arr) {
-return arr.map(({id,preview,title,description,popularity}) => {
+return arr.map(({preview,title,description}) => {
     `<li class ="popular-recipe-list">
-        <img class="img-dish" src="${preview}" alt="${title}">
+        <img class="img-dish" src=" 
+        "https://www.themealdb.com/images/media/meals/tqtywx1468317395.jpg"${preview}" alt="${title}">
         <h2 class= "name-dish">${title}</h2>
         <h3 class="deskription-dish">${description}</h3>
     </li>`
