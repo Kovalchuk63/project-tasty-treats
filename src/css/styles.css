@@ -8,6 +8,15 @@
 @import url('./base/hidden.css');
 @import url('./base/reset.css');
 @import url('./base/scroll.css');
+@import url('./block-categories.css');
+@import url('./header.css');
+@import url('./hero.css');
+@import url('./list-of-popular.css');
+@import url('./list-of-recipes.css');
+@import url('./modal-order.css');
+@import url('./modal-rating.css');
+@import url('./modal-recipe.css');
+
 
 
 :root {
