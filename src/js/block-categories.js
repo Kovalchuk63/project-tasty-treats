@@ -2,7 +2,7 @@ const selectorsCategories = {
   categoriesBtnList: document.querySelector('.js-categories-btn-card'),
 };
 
-serviseCategories()
+serviseCategoriesBtn()
   .then(data => {
     console.log(data);
     selectorsCategories.categoriesBtnList.insertAdjacentHTML(
@@ -11,7 +11,7 @@ serviseCategories()
     );
   })
   .catch(error => console.log(error));
-async function serviseCategories() {
+async function serviseCategoriesBtn() {
   const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/categories';
   const response = await fetch(`${BASE_URL}`);
   if (!response.ok) {
@@ -20,6 +20,7 @@ async function serviseCategories() {
   return response.json();
 }
 
+//Markup categories-btn
 function createMarkup(arr) {
   return arr
     .map(
@@ -28,7 +29,3 @@ function createMarkup(arr) {
     )
     .join('');
 }
-selectorsCategories.categoriesBtnList.addEventListener(
-  'click',
-  handlerClickBtn
-);
