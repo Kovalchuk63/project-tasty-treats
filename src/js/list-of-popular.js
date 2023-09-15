@@ -16,13 +16,12 @@ function serviceRecipe() {
 }
 /* =================SHOW-CARD ======================== */
 function createMarkupCard(arr) {
-  return `<ul class="popular-recipe-list">
-            ${arr.map(({ id, preview, title, description, popularity }) => {
-              return `<li key="${id}" class="popular-recipe-item">
-                        <img class="img-dish" src="${preview}" alt="${title}">
-                        <h2 class="name-dish">${title}</h2>
-                        <h3 class="description-dish">${description}</h3>
-                      </li>`;
-            }).join('')}
-          </ul>`;
-}
+    return arr.map(({ id, preview, title, description, popularity }) => {
+      return `<li key="${id}" class="popular-recipe-item">
+        <img class="img-dish" src="${preview}" alt="${title}">
+        <h2 class="name-dish">${title}</h2>
+        <h3 class="description-dish">${description}</h3>
+      </li>`;
+    }).join('');
+  }
+  
