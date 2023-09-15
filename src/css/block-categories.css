@@ -17,18 +17,21 @@
   transition: background-color var(--transition), color var(--transition);
 }
 
+/* Basic styles */
 .all-categories-btn:hover,
 .all-categories-btn:focus {
   background-color: var(--brand-color);
   color: #f8f8f8;
 }
 
+/* Tablet styles >= 768px */
 @media only screen and (min-width: 768px) {
   .all-categories-btn {
     margin-bottom: 30px;
   }
 }
 
+/* Desctop styles >= 1280px */
 @media only screen and (min-width: 1280px) {
   .all-categories-btn {
     margin-bottom: 42px;
@@ -42,12 +45,14 @@
   overflow-y: auto;
 }
 
+/* Mobile styles <= 767px */
 @media only screen and (max-width: 767px) {
   .categories-btn-card {
     margin-bottom: 40px;
   }
 }
 
+/* Tablet styles >=768px */
 @media only screen and (min-width: 768px) {
   .categories-btn-card {
     max-width: 176px;
@@ -55,6 +60,7 @@
   }
 }
 
+/* Desctop styles >=1280px */
 @media only screen and (min-width: 1280px) {
   .categories-btn-card {
     max-width: 235px;
@@ -76,30 +82,36 @@
   transition: color var(--transition);
 }
 
+/* Basic styles */
 .categories-btn:hover,
 .categories-btn:focus {
   color: var(--brand-color);
 }
 
+/* Basic styles */
 .categories-btn:not(:last-child) {
   margin-bottom: 18px;
 }
 
+/* Basic styles */
 .all-categories-btn-active {
   color: #f8f8f8;
   background-color: var(--brand-color);
 }
 
+/* Tablet styles >= 768px */
 @media only screen and (min-width: 768px) {
   .categories-btn:not(:last-child) {
     margin-bottom: 24px;
   }
 }
 
+/* Basic styles */
 .categories-btn-card::-webkit-scrollbar {
   width: 8px;
 }
 
+/* Basic styles */
 .categories-btn-card::-webkit-scrollbar-thumb {
   border-radius: 12px;
   background-color: rgba(5, 5, 5, 0.18);

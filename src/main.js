@@ -6,3 +6,4 @@ import './js/list-of-recipes';
 import './js/modal-order';
 import './js/modal-rating';
 import './js/modal-recipe'
+import './js/favorite-page'

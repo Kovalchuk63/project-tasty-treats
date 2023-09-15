@@ -1,8 +1,6 @@
 import { fechCook } from '/js/api/requstCook.js';
-
 import Swiper, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
-
 const swiperContainer = document.querySelector('.events');
 
 fechCook().then(data => {
@@ -25,11 +23,11 @@ fechCook().then(data => {
 
   swiperContainer.innerHTML = swiperCard;
 
-  const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
+  const swiper = new Swiper('.events', {
+    /*.swiper*/ modules: [Navigation, Pagination],
     allowSlideNext: true,
     pagination: {
-      el: '.page',
+      el: '.swiper-pagination' /*event*/,
       clickable: true,
     },
     speed: 500,
