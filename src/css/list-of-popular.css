@@ -1,19 +1,21 @@
-img {}
-
 .img-dish {
     width: 80px;
     border-radius: 10px;
 }
 
 
-
+.popular-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 
 .name-popular {
     /* font-size: 24px;
     font-style: normal;
     font-weight: 600;
     line-height: 1.16; */
-    margin-bottom: 32px;
+    font-size: 24px;
     /* margin-left: 100px; */
 }
 
@@ -22,36 +24,27 @@ img {}
 }
 
 .popular-recipe-item {
-    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
 }
 
-@media screen and (max-width:767px) {
-    .popular-recipe-item {
-        display: flex;
-    }
-
-}
-
-
-@media screen and (min-width:120px) {
-    .popular-recipe-item {
-        display: flex;
-        flex-direction: row;
-    }
-}
 
 .name-dish {}
 
 .description-dish {
     padding-top: 10px;
-    white-space: pre-wrap;
+    /* white-space: pre-wrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
 
 }
 
 @media screen and (min-width:768px) {
-    .description-dish {}
+    .description-dish {
+        font-size: 10px;
+        line-height: 1.4;
+        width: 214px;
+    }
 }
 
 .div-popular-list {
