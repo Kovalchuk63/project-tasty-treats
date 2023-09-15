@@ -20,7 +20,7 @@ serviceRecype()
 /*=================SHOW-CARD===========================*/
 
 function createMarkupCard(arr) {
-    return `${arr.map(({ id, preview, title, description, }) => {
+    return `${arr.map(({ id, preview, title, description }) => {
         return `<li key="${id}" class="popular-recipe-item">            
         <img class="img-dish" src="${preview}" alt="${title}"> 
         <div class ="div-popular-list">
@@ -29,8 +29,6 @@ function createMarkupCard(arr) {
         </div>
          </li>`;
               }).join('')}
-            </ul>`;
-  } 
+            `;
 
-  /*=================DISPLAY-NONE-CARD===========================*/
-  
+            }  
