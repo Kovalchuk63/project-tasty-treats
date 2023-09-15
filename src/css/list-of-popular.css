@@ -1,14 +1,11 @@
+img {}
+
 .img-dish {
     width: 80px;
     border-radius: 10px;
 }
 
-@media screen and (max-width:768px) {
-    .img-dish {
-        width: 50px;
-        border-radius: 10px;
-    }
-}
+
 
 
 .name-popular {
@@ -25,27 +22,49 @@
 }
 
 .popular-recipe-item {
-    display: flex;
-    flex-direction: row;
     margin-bottom: 30px;
 }
 
+@media screen and (max-width:767px) {
+    .popular-recipe-item {
+        display: flex;
+    }
+
+}
+
+
+@media screen and (min-width:120px) {
+    .popular-recipe-item {
+        display: flex;
+        flex-direction: row;
+    }
+}
 
 .name-dish {}
 
 .description-dish {
     padding-top: 10px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
 }
 
 @media screen and (min-width:768px) {
-    .description-dish {
-        font-size: 15px;
-    }
+    .description-dish {}
 }
 
 .div-popular-list {
-    margin-left: 10px;
     display: flex;
-    flex-direction: column;
+    margin-left: 10px;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width:767px) {
+
+    .div-popular-list {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+    }
 }
