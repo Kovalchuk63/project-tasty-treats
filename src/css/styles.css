@@ -18,8 +18,6 @@
 @import url('./modal-recipe.css');
 @import url('./main-section.css');
 
-
-
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -41,9 +39,9 @@
   --dt-border-color-opacity-twenty: rgba(255, 255, 255, 0.2);
   --dt-text-color-opacity-thirty: rgba(255, 255, 255, 0.3);
   --dt-text-color-opacity-fifty: rgba(255, 255, 255, 0.5);
-  --dt-text-color-opacity-sixty:rgba(255, 255, 255, 0.6);
+  --dt-text-color-opacity-sixty: rgba(255, 255, 255, 0.6);
   --dt-text-color-opacity-eighty: rgba(255, 255, 255, 0.8);
-  
+
   --brand-color: rgba(155, 181, 55, 1);
   --stars-color: rgba(238, 161, 12, 1);
   --shadow: 7px 5px 15px 0px rgba(160, 158, 160, 0.6);
@@ -55,7 +53,6 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
 
 /* контейнер для 3ьох переломів в цсс */
 
