@@ -44,6 +44,7 @@ function handlerSearchBtn(evt) {
   serviseCategoriesRecipes(evt.target.textContent);
 }
 
+// API all-categories-recipes
 async function serviseCategoriesRecipes(category) {
   const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/recipes';
   const params = new URLSearchParams({
