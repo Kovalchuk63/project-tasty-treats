@@ -2,8 +2,21 @@ img {
     width: 64px;
 }
 
-.name-popular {}
 
-.img-dish {
+.name-popular {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.16;
     margin-top: 32px;
+    margin-left: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    .name-popular {}
+}
+
+.popular-recipe-item {
+    display: flex;
+    margin-left: ;
 }
