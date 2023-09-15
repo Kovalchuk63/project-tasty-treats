@@ -32,7 +32,9 @@
 
 .name-dish {}
 
-.description-dish {}
+.description-dish {
+    padding-top: 10px;
+}
 
 .div-popular-list {
     margin-left: 10px;
