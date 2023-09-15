@@ -1,53 +1,49 @@
 const popularRecipe = document.querySelector('.js-popular-recipes');
 /*=================BACK-END===========================*/
-// serviceRecype()
-//     .then((data) => {
-//         console.log(data);
-//     })
-//     .catch(err => console.log(err))
-
-//     function serviceRecype() {
-        const URL =  'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
-//         return fetch(`${URL}`)
-//     .then((resp) => {
-//         // popularRecipe.insertAdjacentHTML('beforeend', createMarkupCard(data))
-
-//    console.log(resp);
-//     return resp.json()
-// });
-//     }
-
-async function serviceRecype() {
-    try {
-        const resp = await fetch(URL);
-        const data = await resp.json()
-        console.log(data);
-    }
-    catch (error) {
-        console.log(error);
-    }
-}
-
-serviceRecype();
-
-/*=================BACK-END===========================*/
-serviceRecype() 
+serviceRecype()
     .then((data) => {
-// popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
+        console.log(data);
     })
     .catch(err => console.log(err))
 
     function serviceRecype() {
         const URL =  'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
-
         return fetch(`${URL}`)
     .then((resp) => {
-    if(!resp.ok) {
-        throw new Error('Error');
-}
+        // popularRecipe.insertAdjacentHTML('beforeend', createMarkupCard(data))
+
+   console.log(resp);
     return resp.json()
 });
-    } 
+    }
+
+// async function serviceRecype() {
+//     try {
+//         const resp = await fetch(URL);
+//         const data = await resp.json()
+//         console.log(data);
+//     }
+//     catch (error) {
+//         console.log(error);
+//     }
+// }
+
+// serviceRecype();
+
+/*=================BACK-END===========================*/
+// serviceRecype() 
+//     .then((data) => {
+// // popularRecipe.insertAdjacentElement('beforeend', createMarkupCard(data.results))
+//     })
+//     .catch(err => console.log(err))
+
+//     async function serviceRecype() {
+//         const URL =  'https://tasty-treats-backend.p.goit.global/api/recipes/popular';
+
+//         const resp = await fetch(`${URL}`);
+//         console.log(resp);
+//         return await resp.json();
+//     } 
 
 /*=================SHOW-CARD===========================*/
 
