@@ -33,13 +33,4 @@ function createMarkupCard(arr) {
   } 
 
   /*=================DISPLAY-NONE-CARD===========================*/
-//   const windowWidth = window.innerWidth;
-
-//   const mobileBreakpoint = 768;
   
-//   if (windowWidth < mobileBreakpoint) {
-//     const mobileCards = document.querySelector('.js-popular-recipes');
-//     mobileCards.map(card => {
-//       card.style.display = 'none';
-//     });
-//   }
