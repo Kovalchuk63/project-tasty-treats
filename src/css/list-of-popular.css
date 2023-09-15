@@ -1,5 +1,6 @@
 .img-dish {
     width: 64px;
+    border-radius: 10px;
 }
 
 @media screen (max-width:768px) {
