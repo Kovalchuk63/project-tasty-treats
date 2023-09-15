@@ -1,57 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tasty Treats</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tasty Treats</title>
+    <!-- Fonts styles -->
 
-  <!-- Fonts styles -->
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <load src="./partials/header.html" />
+    </header>
+    <main>
+      <load src="./partials/hero.html" />
 
-  <!-- Normalize -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <section class="filter">
-    <div class="container">
-      <div class="left-side">
-        <load src="./partials/block-categories.html" />
-        <load src="./partials/list-of-popular.html" />
-      </div>
-      <div class="right-side">
-        <load src="./partials/list-of-recipes.html" />
-      </div>
-    </div>
-  </section>
-  </main>
 
-  <!-- Custom styles -->
-  <link rel="stylesheet" href="./css/styles.css" />
-</head>
+      <section class="filter">
+        <div class="container">
+          <div class="left-side">
+            <load src="./partials/block-categories.html" />
+            <load src="./partials/list-of-popular.html" />
+          </div>
+          <div class="right-side">
+            <load src="./partials/block-search.html" />
+            <load src="./partials/list-of-recipes.html" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <load src="./partials/modal-order.html" />
+    <load src="./partials/modal-rating.html" />
+    <load src="./partials/modal-recipe.html" />
 
-<body>
-  <header>
-    <load scr="./partials/header.html" />
-  </header>
-  <main>
-    <load src="./partials/hero.html" />
-
-    <section class="filter">
-      <div class="left-side">
-        <load src="./partials/block-categories.html" />
-        <load src="./partials/list-of-popular.html" />
-      </div>
-      <div class="right-side">
-        <load src="./partials/list-of-recipes.html" />
-      </div>
-    </section>
-  </main>
-  <load src="./partials/modal-order.html" />
-  <load src="./partials/modal-rating.html" />
-  <load src="./partials/modal-recipe.html" />
-
-  <script type="module" src="/main.js"></script>
-</body>
-
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
