@@ -1,11 +1,12 @@
 .img-dish {
-    width: 64px;
+    width: 80px;
     border-radius: 10px;
 }
 
-@media screen (max-width:768px) {
-    img {
-        width: 50px
+@media screen and (max-width:768px) {
+    .img-dish {
+        width: 50px;
+        border-radius: 10px;
     }
 }
 
