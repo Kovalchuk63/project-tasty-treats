@@ -2,6 +2,7 @@ const selectorsCategories = {
   categoriesBtnList: document.querySelector('.js-categories-btn-card'),
 };
 
+// API categories-btn
 serviseCategoriesBtn()
   .then(data => {
     console.log(data);
