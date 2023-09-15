@@ -30,3 +30,21 @@ function createMarkup(arr) {
     )
     .join('');
 }
+
+selectorsCategories.categoriesBtnList.addEventListener(
+  'click',
+  handlerSearchBtn
+);
+
+function handlerSearchBtn(evt) {
+  serviseCategoriesRecipes(evt.target.textContent);
+}
+
+async function serviseCategoriesRecipes(category) {
+  const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/recipes';
+  const params = new URLSearchParams({
+    category: category,
+  });
+  const response = await fetch(`${BASE_URL}?${params}`);
+  console.log(response);
+}
