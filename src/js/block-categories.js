@@ -1,4 +1,5 @@
 const selectorsCategories = {
+  allCategoriesBtn: document.querySelector('.js-all-categories-btn'),
   categoriesBtnList: document.querySelector('.js-categories-btn-card'),
 };
 
@@ -37,6 +38,9 @@ selectorsCategories.categoriesBtnList.addEventListener(
 );
 
 function handlerSearchBtn(evt) {
+  selectorsCategories.allCategoriesBtn.classList.remove(
+    'all-categories-btn-active'
+  );
   serviseCategoriesRecipes(evt.target.textContent);
 }
 
