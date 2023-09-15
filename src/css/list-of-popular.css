@@ -4,6 +4,20 @@
     height: 64px;
 }
 
+@media screen and (min-width:768px) {
+    .img-dish {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .img-dish {
+        width: 64px;
+        height: 64px;
+    }
+}
+
 @media screen and (max-width:768px) {
     .popular-list:nth-child(odd) {
         display: none;
@@ -16,6 +30,19 @@
     gap: 24px;
 }
 
+@media screen and (min-width:768px) {
+    .popular-list {
+        gap: 16px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .popular-list {
+        gap: 32px;
+    }
+}
+
+
 .name-popular {
     text-transform: uppercase;
     color: var(--color-title-text);
@@ -27,9 +54,12 @@
     margin-bottom: 20px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
     .name-popular {
-        margin-bottom: 32px
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.16;
     }
 }
 
@@ -38,15 +68,15 @@
     flex-direction: row;
 }
 
-
-.name-dish {}
-
 .description-dish {
-    padding-top: 10px;
-    /* white-space: pre-wrap;
+    color: rgba(5, 5, 5, 0.8);
+    font-size: 12px;
+    line-height: 1.33;
+    width: 255px;
+    height: 30px;
     overflow: hidden;
-    text-overflow: ellipsis; */
-
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
 .description-dish {
@@ -55,30 +85,59 @@
     width: 160px;
 }
 
-@media screen and (min-width:768px) and (max-width:1159px) {
+@media screen and (min-width:768px) {
     .description-dish {
-        width: 155px;
+        font-size: 10px;
+        line-height: 1.4;
+        width: 120px;
+        height: 41px;
     }
 }
 
 @media screen and (min-width:1200px) {
     .description-dish {
 
-        width: 300px;
+        width: 155px;
     }
 }
 
 .div-popular-list {
-    display: flex;
-    margin-left: 10px;
-    flex-wrap: wrap;
+    margin-left: 16px;
+    height: 64px;
+
 }
 
-@media screen and (min-width:767px) {
+@media screen and (min-width:768px) {
 
     .div-popular-list {
-        margin-left: 10px;
-        display: flex;
-        flex-direction: column;
+        width: 120px;
+        height: 67px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+
+    .div-popular-list {
+        width: 155px;
+        height: 64px;
+    }
+}
+
+
+.name-dish {
+    color: var(--lt-text-color);
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.28;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+@media screen and (min-width:768px) {
+    .name-dish {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        overflow-wrap: break-word;
     }
 }
