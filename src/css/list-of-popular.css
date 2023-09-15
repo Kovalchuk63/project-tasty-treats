@@ -25,19 +25,17 @@
 .popular-recipe-item {
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
 }
 
 .popular-list {}
 
-.name-dish {
-    margin-left: 10px;
-}
+.name-dish {}
 
-.description-dish {
-    margin-left: 10px;
-}
+.description-dish {}
 
 .div-popular-list {
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
 }
