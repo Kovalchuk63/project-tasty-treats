@@ -1,0 +1,51 @@
+.img-dish {
+    width: 80px;
+    border-radius: 10px;
+}
+
+@media screen and (max-width:768px) {
+    .img-dish {
+        width: 50px;
+        border-radius: 10px;
+    }
+}
+
+
+.name-popular {
+    /* font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.16; */
+    margin-bottom: 32px;
+    /* margin-left: 100px; */
+}
+
+@media screen and (max-width: 768px) {
+    .name-popular {}
+}
+
+.popular-recipe-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+
+.name-dish {}
+
+.description-dish {
+    padding-top: 10px;
+
+}
+
+@media screen and (min-width:768px) {
+    .description-dish {
+        font-size: 15px;
+    }
+}
+
+.div-popular-list {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
