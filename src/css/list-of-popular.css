@@ -1,15 +1,21 @@
-img {
+.img-dish {
     width: 64px;
+}
+
+@media screen (max-width:768px) {
+    img {
+        width: 50px
+    }
 }
 
 
 .name-popular {
-    font-size: 24px;
+    /* font-size: 24px;
     font-style: normal;
     font-weight: 600;
-    line-height: 1.16;
-    margin-top: 32px;
-    margin-left: 100px;
+    line-height: 1.16; */
+    margin-bottom: 32px;
+    /* margin-left: 100px; */
 }
 
 @media screen and (max-width: 768px) {
@@ -18,5 +24,20 @@ img {
 
 .popular-recipe-item {
     display: flex;
-    margin-left: ;
+    flex-direction: row;
+}
+
+.popular-list {}
+
+.name-dish {
+    margin-left: 10px;
+}
+
+.description-dish {
+    margin-left: 10px;
+}
+
+.div-popular-list {
+    display: flex;
+    flex-direction: column;
 }
