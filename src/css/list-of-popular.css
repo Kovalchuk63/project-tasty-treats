@@ -26,10 +26,9 @@
 .popular-recipe-item {
     display: flex;
     flex-direction: row;
-    margin-top: 5px;
+    margin-bottom: 30px;
 }
 
-.popular-list {}
 
 .name-dish {}
 
