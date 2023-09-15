@@ -41,7 +41,9 @@ function handlerSearchBtn(evt) {
   selectorsCategories.allCategoriesBtn.classList.remove(
     'all-categories-btn-active'
   );
-  serviseCategoriesRecipes(evt.target.textContent);
+  serviseCategoriesRecipes(evt.target.textContent)
+    .then(data => ``)
+    .catch(error => console.log(error));
 }
 
 // API all-categories-recipes
@@ -51,5 +53,8 @@ async function serviseCategoriesRecipes(category) {
     category: category,
   });
   const response = await fetch(`${BASE_URL}?${params}`);
-  console.log(response);
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+  return response.json();
 }
