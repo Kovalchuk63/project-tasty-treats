@@ -1,9 +1,9 @@
-const categoriesBtn = document.querySelector('.all-categories-btn');
+const categoriesBtn = document.querySelector('.js-all-categories-btn');
 const cardsList = document.querySelector('.js-card-list');
 
 categoriesBtn.addEventListener('click', onAllCategoryButtonClick);
 
-categoriesBtn.classList.add('all-categories-btn-active');
+// categoriesBtn.classList.add('all-categories-btn-active');
 // categoriesBtn.classList.remove("all-categories-btn-active"); - Для Романа
 
 loadAllCategories();
@@ -36,9 +36,11 @@ function allCategoriesMarkup(cards) {
       <svg class="card-svg-heart" width="22px" height="22px">
         <use href="../sprite.svg#icon-heart"></use>
       </svg>
+      <div class="image-gradient">
       <img class="card-img" src="${preview || defaults.preview}" alt="${
         title || defaults.title
       }"/>
+      </div>
       <div class="card-text">
       <h2 class="card-dish-name">${title || defaults.title}</h2>
       <p class="card-dish-descr">${description || defaults.description}</p>
@@ -72,7 +74,7 @@ function allCategoriesMarkup(cards) {
 }
 
 function onAllCategoryButtonClick() {
-  categoriesBtn.classList.add('all-categories-btn-active');
+  // categoriesBtn.classList.add('all-categories-btn-active');
   categoriesCardsSearch()
     .then(cards => {
       const markup = allCategoriesMarkup(cards);
