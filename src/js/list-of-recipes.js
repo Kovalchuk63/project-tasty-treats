@@ -38,7 +38,7 @@ function allCategoriesMarkup(cards) {
     .map(({ preview, title, description, rating }) => {
       return `<li class="card-item">
       <svg class="card-svg-heart" width="22px" height="22px">
-        <use href=""></use>
+        <use href="../sprite.svg#icon-heart"></use>
       </svg>
       <img class="card-img" src="${preview}" alt="${title}" width="335px" height="335px" />
       <div class="card-text">
@@ -48,20 +48,20 @@ function allCategoriesMarkup(cards) {
       <div class="rating-btn-container">
         <div class="rating-container">
           <p class="rating-number">${rating}</p>
-          <svg class="svg-star" width="18px" height="18px">
-            <use href=""></use>
+          <svg class="svg-star">
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
-          <svg class="svg-star" width="18px" height="18px">
-            <use href=""></use>
+          <svg class="svg-star">
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
-          <svg class="svg-star" width="18px" height="18px">
-            <use href=""></use>
+          <svg class="svg-star">
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
-          <svg class="svg-star" width="18px" height="18px">
-            <use href=""></use>
+          <svg class="svg-star">
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
-          <svg class="svg-star" width="18px" height="18px">
-            <use href=""></use>
+          <svg class="svg-star">
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
         </div>
         <button type="button" class="recipe-btn">See recipe</button>

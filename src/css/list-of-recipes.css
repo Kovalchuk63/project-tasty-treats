@@ -93,11 +93,7 @@
     margin-left: 32px;
   }
 
-  .card-item {
-    width: 240px;
-    height: 264px;
-  }
-
+  .card-item,
   .card-img {
     width: 240px;
     height: 264px;
@@ -276,5 +272,24 @@
 @media screen and (min-width: 1280px) {
   .rating-btn-container {
     width: 218px;
+  }
+}
+
+.svg-star {
+  width: 18px;
+  height: 18px;
+}
+
+@media screen and (min-width: 768px) {
+  .svg-star {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .svg-star {
+    width: 18px;
+    height: 18px;
   }
 }
