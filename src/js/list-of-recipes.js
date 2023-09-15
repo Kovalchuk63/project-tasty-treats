@@ -8,21 +8,17 @@ categoriesBtn.classList.add('all-categories-btn-active');
 
 loadAllCategories();
 
-// const defaults = {
-//   webformatURL:
-//     "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg",
-//   largeImageURL:
-//     "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg",
-//   tags: "no description",
-//   likes: "0",
-//   views: "0",
-//   comments: "0",
-// };
+const defaults = {
+  preview: '../img/no-image-icon-23485.png',
+  title: 'no title',
+  description: 'no description',
+  rating: 'xx',
+};
 
 async function categoriesCardsSearch() {
   const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
   const params = new URLSearchParams({
-    perPage: 9,
+    limit: 9,
   });
 
   const response = await fetch(`${BASE_URL}/recipes?${params}`);
@@ -40,14 +36,17 @@ function allCategoriesMarkup(cards) {
       <svg class="card-svg-heart" width="22px" height="22px">
         <use href="../sprite.svg#icon-heart"></use>
       </svg>
-      <img class="card-img" src="${preview}" alt="${title}" width="335px" height="335px" />
+      <img class="card-img" src="${preview || defaults.preview}" alt="${
+        title || defaults.title
+      }"/>
       <div class="card-text">
-      <h2 class="card-dish-name">${title}</h2>
-      <p class="card-dish-descr">${description}</p>
+      <h2 class="card-dish-name">${title || defaults.title}</h2>
+      <p class="card-dish-descr">${description || defaults.description}</p>
       </div>
       <div class="rating-btn-container">
-        <div class="rating-container">
+        
           <p class="rating-number">${rating}</p>
+          <div class="rating-container">
           <svg class="svg-star">
             <use href="../sprite.svg#icon-Star"></use>
           </svg>
