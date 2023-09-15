@@ -34,6 +34,13 @@
 
 .description-dish {
     padding-top: 10px;
+
+}
+
+@media screen and (min-width:768px) {
+    .description-dish {
+        font-size: 15px;
+    }
 }
 
 .div-popular-list {
