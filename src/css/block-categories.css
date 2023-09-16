@@ -45,13 +45,6 @@
   overflow-y: auto;
 }
 
-/* Mobile styles <= 767px */
-@media only screen and (max-width: 767px) {
-  .categories-btn-card {
-    margin-bottom: 40px;
-  }
-}
-
 /* Tablet styles >=768px */
 @media only screen and (min-width: 768px) {
   .categories-btn-card {
@@ -115,4 +108,16 @@
 .categories-btn-card::-webkit-scrollbar-thumb {
   border-radius: 12px;
   background-color: rgba(5, 5, 5, 0.18);
+}
+
+/* Basic styles */
+.all-categories-card {
+  margin-bottom: 40px;
+}
+
+/* Tablet styles >=768px */
+@media only screen and (min-width: 768px) {
+  .all-categories-card {
+    margin-bottom: 64px;
+  }
 }
