@@ -11,11 +11,46 @@
   <div class="swiper-pagination"></div>
 </div>
 */
-/*
+
 .events {
   display: flex;
 }
 
+.swiper-card {
+  display: flex;
+}
+
+.cook {
+  height: 442px;
+  width: 137px;
+}
+
+.plate-slide {
+  height: 442px;
+  width: 351px;
+}
+
+.plate {
+  display: block;
+  height: 271px;
+  width: 304px;
+}
+
+.plate-name {
+  font-size: 20px;
+  color: green;
+}
+
+.plate-sub {
+  font-size: 20px;
+  color: green;
+}
+
+.dish {
+  height: 442px;
+  width: 351px;
+}
+/*
 .swiper-card {
   display: flex;
 }

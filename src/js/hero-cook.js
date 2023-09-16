@@ -13,7 +13,7 @@ fechCook().then(data => {
           <div class="plate-slide">
             <div class="plate"><img src="${item.topic.previewUrl}" width="351px" height="468px"/></div>
             <p class="plate-name">${item.topic.name}</p>
-            <p class="plate-area">${item.topic.area}</p>
+            <p class="plate-sub">${item.topic.area}</p>
           </div>
           <div class="dish"><img src="${item.topic.previewUrl}" width="351px" height="442px"/></div>
         </div>
@@ -24,7 +24,7 @@ fechCook().then(data => {
   swiperContainer.insertAdjacentHTML('beforeend', swiperCard(data));
 
   /*swiper*/
-  const swiper = new Swiper('.events', {
+  const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination],
     allowSlideNext: true,
     autoplay: {
