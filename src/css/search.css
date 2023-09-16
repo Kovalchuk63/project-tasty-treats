@@ -1,5 +1,5 @@
 select {
-   
+    -webkit-appearance: none;
 }
 .search-container {
     display: flex;
@@ -7,6 +7,7 @@ select {
     flex-wrap: wrap;
     margin-bottom: 14px;
     max-width: 780px;
+    margin-top: 43px;
 
 }
 /* Container organization */
@@ -66,9 +67,9 @@ select {
     margin-right: 14px;
 }
 
-.area-box {
+/* .area-box {
     
-}
+} */
 
 .ingredients-box {
    margin-bottom: 16px; 
