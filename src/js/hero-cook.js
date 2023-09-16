@@ -23,8 +23,8 @@ fechCook().then(data => {
 
   swiperContainer.insertAdjacentHTML('beforeend', swiperCard);
 
-  /*swiper*/
-  const swiper = new Swiper('.swiper', {
+  /*swiper, events*/
+  const swiper = new Swiper('.events', {
     modules: [Navigation, Pagination],
     allowSlideNext: true,
     autoplay: {

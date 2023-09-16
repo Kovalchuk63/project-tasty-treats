@@ -50,6 +50,11 @@
   height: 442px;
   width: 351px;
 }
+
+.slice {
+  width: 5px;
+  height: 5px;
+}
 /*
 .swiper-card {
   display: flex;
