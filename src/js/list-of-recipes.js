@@ -1,3 +1,5 @@
+import sprite from '../sprite.svg'
+
 const categoriesBtn = document.querySelector('.js-all-categories-btn');
 const cardsList = document.querySelector('.js-card-list');
 
@@ -30,11 +32,12 @@ async function categoriesCardsSearch() {
 
 function allCategoriesMarkup(cards) {
   console.log(cards);
+  
   const markup = cards.results
     .map(({ preview, title, description, rating }) => {
       return `<li class="card-item">
           <svg class="card-svg-heart" width="22px" height="22px">
-        <use href="/src/sprite.svg#icon-heart"></use>
+        <use href="../sprite.svg#icon-heart"></use>
       </svg>
       <div class="image-gradient">
       <img class="card-img" src="${preview || defaults.preview}" alt="${
@@ -50,19 +53,19 @@ function allCategoriesMarkup(cards) {
           <p class="rating-number">${rating}</p>
           <div class="rating-container">
           <svg class="svg-star">
-            <use href="/src/sprite.svg#icon-Star"></use>
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="/src/sprite.svg#icon-Star"></use>
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="/src/sprite.svg#icon-Star"></use>
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="/src/sprite.svg#icon-Star"></use>
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="/src/sprite.svg#icon-Star"></use>
+            <use href="../sprite.svg#icon-Star"></use>
           </svg>
         </div>
         <button type="button" class="recipe-btn">See recipe</button>
