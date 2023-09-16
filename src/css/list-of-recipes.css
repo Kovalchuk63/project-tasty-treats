@@ -1,47 +1,4 @@
-/* .all-categories-btn {
-  display: inline-flex;
-  padding: 14px 29px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 24px;
-  min-width: 176px;
-  min-height: 50px;
-  margin-left: 20px;
-
-  border-radius: 15px;
-  border: 1px solid rgba(5, 5, 5, 0.2);
-
-  color: rgba(5, 5, 5, 0.5);
-  font-family: Inter;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  transition: background-color 250ms cubic-bezier(1, 0, 0, 1),
-    color 250ms cubic-bezier(1, 0, 0, 1);
-}
-
-.all-categories-btn:hover,
-.all-categories-btn:focus {
-  background-color: var(--brand-color);
-  color: var(--dt-text-color);
-}
-
-.all-categories-btn-active {
-  color: var(--dt-text-color);
-  background-color: var(--brand-color);
-}
-
-.all-categories-btn:active {
-  transform: translateY(4px);
-}
-
-@media screen and (min-width: 1280px) {
-  .all-categories-btn {
-    padding: 14px 28px;
-  }
-} */
+import {sprite} from 
 
 .card-list {
   display: flex;
@@ -111,13 +68,13 @@
 }
 
 @media screen and (max-width: 767px) {
-  .card-item:nth-last-child(-n + 3) {
+  .card-item:nth-child(n + 7) {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .card-item:nth-last-child(-n + 1) {
+  .card-item:nth-child(n + 9) {
     display: none;
   }
 }
