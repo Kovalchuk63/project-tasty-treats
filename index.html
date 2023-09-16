@@ -18,8 +18,8 @@
     />
     <!-- Custom styles -->
     
-    <script type="module" crossorigin src="/project-tasty-treats/assets/list-of-recipes-c76068e7.js"></script>
-    <link rel="stylesheet" href="/project-tasty-treats/assets/index-2f59910f.css">
+    <script type="module" crossorigin src="/project-tasty-treats/assets/modal-order-f7f41638.js"></script>
+    <link rel="stylesheet" href="/project-tasty-treats/assets/index-9690c4df.css">
   </head>
   <body>
     <header>
@@ -42,7 +42,7 @@
     </a>
     <div class="header-btn-box">
         <a
-          href="#"
+          data-modal-open
           class="shopping-link link"
           rel="noopener noreferrer"
           aria-label="shopping-card"
@@ -152,7 +152,75 @@
         </div>
       </section>
     </main>
-    
+    <!-- Module Window -->
+<div class="backdrop is-hidden" data-modal>
+    <div class="thumb-order">
+        <button data-modal-close type="button" class="thumb-btn-order">
+          <svg width="20" height="20" class="thumb-svg-order">
+            <use href="./src/sprite.svg#icon-modal-cross"></use>
+          </svg>
+        </button>
+        <strong class="modal-order-head"
+          >Order now</strong
+        >
+        <!-- INPUTS -->
+        <form class="modal-form-order">
+          <ul class="inp-ul-order list">
+            <li class="inp-li-order">
+                <label class="inp-lab">Name
+                <input class="input-order"
+                type="text" 
+                id="name" name="name" 
+                required 
+                pattern="[A-Za-zА-Яа-яЁё\s]{2,30}"
+                minlength="2" 
+                maxlength="50" 
+                autocapitalize="words">
+            </label>
+            </li>
+            <li class="inp-li-order">
+                <label class="inp-lab">Phone number
+                <input class="input-order"
+                type="tel" 
+                id="phone" 
+                name="phone" 
+                required 
+                pattern="[0-9()+\-\s]{5,20}"
+                minlength="10"
+                maxlength="10" 
+                autocorrect="off" 
+                autocomplete="tel">
+            </label>
+            </li>
+            <li class="inp-li-order">
+                <label class="inp-lab">Email
+                <input class="input-order"
+                type="email" 
+                id="email" 
+                name="email" 
+                required 
+                pattern=""
+                autocorrect="off" 
+                autocomplete="email">
+
+            </label>
+            </li>
+            <li class="inp-li-order">
+                <label class="inp-lab">Comment
+                <textarea
+                class="input-order input-comm-order"
+                name="Comment"
+                id="modal_comment"
+                rows="4"
+                style="resize: none;"                
+              ></textarea>
+            </label>
+            </li>
+          </ul>
+        </form>
+        <button class="btn-send-order" type="submit">Send</button>
+      </div>
+</div>
     
     
 
