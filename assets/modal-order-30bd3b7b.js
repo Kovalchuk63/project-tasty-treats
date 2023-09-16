@@ -40,7 +40,7 @@
          </li>`).join("")}
             `}const S=document.querySelector(".js-all-categories-btn"),l=document.querySelector(".js-card-list");S.addEventListener("click",L);$();const a={preview:"../img/no-image-icon-23485.png",title:"no title",description:"no description",rating:"xx"};async function d(){const e="https://tasty-treats-backend.p.goit.global/api",t=new URLSearchParams({limit:9}),r=await fetch(`${e}/recipes?${t}`);if(!r.ok)throw new Error(r.statusText);return await r.json()}function u(e){return console.log(e),e.results.map(({preview:r,title:n,description:s,rating:o})=>`<li class="card-item">
           <svg class="card-svg-heart" width="22px" height="22px">
-        <use href="../sprite.svg#icon-heart"></use>
+        <use href="/sprite.svg#icon-heart"></use>
       </svg>
       <div class="image-gradient">
       <img class="card-img" src="${r||a.preview}" alt="${n||a.title}"/>
@@ -54,19 +54,19 @@
           <p class="rating-number">${o}</p>
           <div class="rating-container">
           <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
+            <use href="/sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
+            <use href="/sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
+            <use href="/sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
+            <use href="/sprite.svg#icon-Star"></use>
           </svg>
           <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
+            <use href="/sprite.svg#icon-Star"></use>
           </svg>
         </div>
         <button type="button" class="recipe-btn">See recipe</button>
