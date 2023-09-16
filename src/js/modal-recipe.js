@@ -100,16 +100,14 @@ async function handlerGetIdCard(event) {
   if (event.target.nodeName !== 'BUTTON') {
     return;
   }
-  Loading.standard('Loading...', { svgColor: '#9bb537' });
+ 
   const buttonId = event.target.getAttribute('id');
   refs.ratingButton.id = buttonId;
   refs.addToFavorite.id = buttonId;
   const dataById = await fetchDataByPath(`/recipes/${buttonId}`);
   const modalMarkup = createMarkupModal(dataById);
   refs.modalCardCont.innerHTML = modalMarkup;
-  fillStars();
   openModal();
-  Loading.remove();
 }
 
 export function createMarkupModal(data) {
