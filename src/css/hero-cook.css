@@ -1,7 +1,7 @@
 /*
 <div class="swiper">
 <div class="events swiper-wrapper"></div>
-<div class="event"></div>
+<div class="page"></div>
 </div>
 
 <div class="swiper">
@@ -9,7 +9,7 @@
   <div class="swiper-pagination"></div>
 </div>
 */
-
+/*
 .events {
   display: flex;
 }
@@ -41,3 +41,4 @@
 .dish {
   display: flex;
 }
+*/

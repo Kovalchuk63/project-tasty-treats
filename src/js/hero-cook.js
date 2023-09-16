@@ -21,13 +21,14 @@ fechCook().then(data => {
     )
     .join('');
 
-  swiperContainer.innerHTML = swiperCard;
+  swiperContainer.insertAdjacentHTML('beforeend', swiperCard(data));
+  /*swiperContainer.innerHTML = swiperCard;*/
 
-  const swiper = new Swiper('.events', {
-    /*.swiper*/ modules: [Navigation, Pagination],
+  const swiper = new Swiper('.swiper', {
+    /*.events*/ modules: [Navigation, Pagination],
     allowSlideNext: true,
     pagination: {
-      el: '.swiper-pagination' /*event*/,
+      el: '.page' /*event*/,
       clickable: true,
     },
     speed: 500,
