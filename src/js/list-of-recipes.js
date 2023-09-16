@@ -33,7 +33,7 @@ function allCategoriesMarkup(cards) {
   const markup = cards.results
     .map(({ preview, title, description, rating }) => {
       return `<li class="card-item">
-      <svg class="card-svg-heart" width="22px" height="22px">
+          <svg class="card-svg-heart" width="22px" height="22px">
         <use href="../sprite.svg#icon-heart"></use>
       </svg>
       <div class="image-gradient">
@@ -95,3 +95,5 @@ async function loadAllCategories() {
     console.log('Error', error.message);
   }
 }
+
+// ======================================================
