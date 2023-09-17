@@ -4,7 +4,7 @@
   flex-direction: column;
   gap: 24px;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   margin-bottom: 40px;
   padding: 0;
 }
@@ -90,10 +90,25 @@
   z-index: 100;
   opacity: 0.5;
   fill: none;
-  stroke: #f8f8f8;
+  stroke: var(--dt-text-color);
   stroke-width: 2;
   stroke-linecap: round;
   stroke-linejoin: round;
+  cursor: pointer;
+}
+
+.card-svg-heart-checked {
+  fill: var(--dt-text-color);
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  z-index: 100;
+  opacity: 0.5;
+  stroke: var(--dt-text-color);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
 }
 
 .card-text {

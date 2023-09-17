@@ -42,9 +42,7 @@
   screen and (min-resolution: 192dpi) and (min-width: 768px),
   screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .hero-img {
-
     background-image: url('../img/favourites-hero/tablet/tablet-hero@2x.jpg');
-
   }
 }
 
@@ -89,6 +87,10 @@
   align-items: center;
   justify-content: center;
   gap: 24px;
+}
+
+.failure-block-hidden {
+  display: none;
 }
 
 .svg-hat {
