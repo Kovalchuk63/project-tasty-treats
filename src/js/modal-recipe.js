@@ -1,85 +1,18 @@
-import axios from 'axios';
-import { Notiflix} from 'notiflix';
+const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api/recipes';
 
-
-export default class TastyTreatsAPI {
-  #BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
-  page = 1;
-  limit = 6;
-  category = null;
-  time = null;
-  area = null;
-  ingredient = null;
-  title = null;
-    async fetchTreats(apiPath) {
-    return await axios.get(`${this.#BASE_URL}${apiPath}`, {
-      params: {
-        page: this.page,
-        limit: this.limit,
-        category: this.category,
-        time: this.time,
-        area: this.area,
-        ingredient: this.ingredient,
-        title: this.title,
-      },
-    });
-  }
-
-  async createTreats(apiPath, formData) {
-    try {
-      const response = await axios.post(
-        `${this.#BASE_URL}${apiPath}`,
-        formData
-      );
-      return response.data;
-    } catch (error) {
-      Report.failure(error.response.data.message);
-      Notify.error(error);
-    }
-  }
-
-  async updateTreats(apiPath, formData) {
-    try {
-      const response = await axios.patch(
-        `${this.#BASE_URL}${apiPath}`,
-        formData
-      );
-      return response.data;
-    } catch (error) {
-      Report.failure(error.response.data.message);
-    }
-  }
-}
-
-
-
-const tastyTreatsApi = new TastyTreatsAPI();
-export async function fetchDataByPath(
-  apiPath,
-  page,
-  limit,
-  category,
-  time,
-  area,
-  ingredient,
-  title
-) {
-  tastyTreatsApi.page = page;
-  tastyTreatsApi.limit = limit;
-  tastyTreatsApi.category = category;
-  tastyTreatsApi.time = time;
-  tastyTreatsApi.area = area;
-  tastyTreatsApi.ingredient = ingredient;
-  tastyTreatsApi.title = title;
+async function fetchCook() {
   try {
-    const { data } = await tastyTreatsApi.fetchTreats(apiPath);
+    const response = await fetch(BASE_URL);
+    if (!response.ok) {
+      throw new Error(`Код: ${response.status}`);
+    }
+    const data = await response.json();
     return data;
   } catch (error) {
-    Notiflix.Notify.failure(error.message);
-    return [];
+    console.error(error);
+    return null;
   }
 }
-
 
 
 const refs = {
@@ -88,27 +21,28 @@ const refs = {
   modalBackdrop: document.querySelector('.modal-backdrop'),
   modalButtonClose: document.querySelector('.modal-btn-close'),
   giveRatingModalBtn: document.querySelector('.modal-give-rating'),
-  ratingModal: document.querySelector('.rating-backdrop'),
-  ratingButton: document.querySelector('.rating-send-btn'),
-  ratingClose: document.querySelector('.modal-rating-close'),
+ // ratingModal: document.querySelector('.rating-backdrop'),
+ // ratingButton: document.querySelector('.rating-send-btn'),
+ // ratingClose: document.querySelector('.modal-rating-close'),
   addToFavorite: document.querySelector('.modal-add-favorite'),
+  recipeBtn: document.querySelector('.recipe-btn'),
 };
 
 refs.allCards.addEventListener('click', handlerGetIdCard);
 
-async function handlerGetIdCard(event) {
-  if (event.target.nodeName !== 'BUTTON') {
-    return;
-  }
+// async function handlerGetIdCard(event) {
+//   if (event.target.nodeName !== 'BUTTON') {
+//     return;
+//   }
  
-  const buttonId = event.target.getAttribute('id');
-  refs.ratingButton.id = buttonId;
-  refs.addToFavorite.id = buttonId;
-  const dataById = await fetchDataByPath(`/recipes/${buttonId}`);
-  const modalMarkup = createMarkupModal(dataById);
-  refs.modalCardCont.innerHTML = modalMarkup;
-  openModal();
-}
+//   const buttonId = event.target.getAttribute('id');
+//   refs.ratingButton.id = buttonId;
+//   refs.addToFavorite.id = buttonId;
+//   const dataById = await fetchCook(`${BASE_URL}${buttonId}`);
+//   const modalMarkup = createMarkupModal(dataById);
+//   refs.modalCardCont.innerHTML = modalMarkup;
+//   openModal();
+// }
 
 export function createMarkupModal(data) {
   const youtubeLink = data.youtube;
@@ -121,6 +55,19 @@ export function createMarkupModal(data) {
   const videoId = getYoutubeVideoId(youtubeLink);
 
   const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+
+
+  const roundedRating = parseFloat(data.rating).toFixed(1);
+
+  const tagsToRender = data.tags.slice(0, 2);
+
+  const tagsMarkup = tagsToRender
+    .map(
+      tag => `
+      <li class="hashtag-btn-item">#${tag}</li>
+    `
+    )
+    .join('');
 
   const ingredientsMarkup = data.ingredients
     .map(
@@ -144,6 +91,15 @@ export function createMarkupModal(data) {
       ></iframe>
       <h3 class="modal-recipe-name">${data.title}</h3>
       <div class="modal-general-inf">
+      <div class="card-star-modal card_star-rating">
+      <p class="modal-raiting cards-raiting">${roundedRating}</p>
+      <div class="starts-modal rating-wrapper">
+  
+
+
+      <p class="modal-card-time">${data.time} min</p>
+    </div>
+
      
         <ul class="modal-ingr-list">${ingredientsMarkup}</ul>
         <ul class="hashtag-btn-list-tablet list">${tagsMarkup}</ul>
@@ -157,7 +113,7 @@ export function createMarkupModal(data) {
  export function openModal() {
   refs.modalButtonClose.addEventListener('click', closeModal);
   refs.modalBackdrop.addEventListener('click', closeModalOnBackdrop);
-  
+  refs.recipeBtn.addEventListener('click', handleRecipeClick )
   window.addEventListener('keydown', handleKeyDown);
   refs.modalBackdrop.classList.add('is-open');
   document.body.style.overflow = 'hidden';
@@ -166,7 +122,7 @@ export function createMarkupModal(data) {
 function handleKeyDown(event) {
   if (event.key === 'Escape') {
     closeModal();
-    closeRatingModal();
+   // closeRatingModal();
   }
 }
  export function closeModal() {
@@ -190,6 +146,11 @@ function handleKeyDown(event) {
     youtubeIframe.src = '';
   }
 }
-
+  async function handleRecipeClick() {
+  const recipeId = clickedRecipe.dataset.id;
+  const dataRecipe = await fetchCook(`${BASE_URL}/recipes/${recipeId}`);
+  modalCardCont.innerHTML = createMarkupModal(dataRecipe);
+  openModal();
+ }
 
 

@@ -71,6 +71,7 @@ function allCategoriesMarkup(cards) {
     </li>`;
     })
     .join('');
+
   return markup;
 }
 

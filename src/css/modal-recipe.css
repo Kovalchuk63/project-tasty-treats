@@ -11,6 +11,7 @@
     height: 100%;
     padding-top: 20px;
     background-color: rgba(30, 40, 39, 0.5);
+    transition: opacity var(--transition), visibility var(--transition);
   }
   
   .backdrop.is-open {
@@ -34,14 +35,23 @@
     position: absolute;
     top: 14;
     right: 14;
+    stroke: var(--lt-text-color);
 }
+
+@media screen and (min-width: 768px) {
+  .modal-btn-close{
+    top: 16;
+    right: 16;
+  }
+}
+
 
 .modal-btn-close:hover .modal-button-icon, .modal-btn-close:focus .modal-button-icon {
     transform: scale(1.2);
   }
 
   .modal-recipe-card {
-    background-color:#FFFFFF;
+    background-color: var(--lt-background-color);
 
 }
 
@@ -49,7 +59,7 @@
     position: relative;
     font-size: 14px;
     line-height: 1.28;
-    color :black;
+    color :var(--lt-text-color);
 }
 
 .modal-recipe-name {
@@ -59,11 +69,30 @@
     text-transform: uppercase;
     margin-bottom: 14px;
 }
+@media screen and (min-width: 768px) {
+  .modal-recipe-name{
+    position: absolute;
+    top: 0;
+    line-height: 1.22;
+    margin-bottom: 0px;
+  }
+}
+
+
 
 .iframe-video {
     width: 295px;
     height: 295px;
     margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .iframe-video{
+    width: 467px;
+    height: 250px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
 }
 
 .modal-general-inf {
@@ -72,25 +101,27 @@
     padding-top: 3px;
   }
   
-  .hashtag-btn-list-tablet {
+   .hashtag-btn-list-tablet {
     display: flex;
   }
-  
+
+   
   .card-star-modal {
     display: flex;
     font-weight: 500;
     margin-bottom: 33px;
     color: #383838;
+
 }
 
-.modal-raiting {
+/* .modal-raiting {
     margin-right: 12px;
   }
   
   .starts-modal {
     display: flex;
     margin-right: 6px;
-  }
+  } */
   
   .modal-ingr-list {
      /* margin-top: 20px; */
@@ -98,6 +129,35 @@
     overflow: hidden;
     overflow-y: auto;
     margin-bottom: 40px;}
+
+    @media screen and (min-width: 768px) {
+      .modal-ingr-list{
+        margin-bottom: 32px;
+      }
+    }
+
+    .modal-ingr-list::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .modal-ingr-list::-webkit-scrollbar-thumb {
+     background-color: var(--lt-text-color-opacity-eighty);
+
+    }
+    @media screen and (min-width: 768px) {
+    .hashtag-btn-list-tablet {
+      gap: 8;
+      margin-bottom: 24px;
+      position: absolute;
+      top: 295;
+      margin-bottom: 0px;}
+    }
+
+    .hashtag-btn-item {
+      padding: 8px 16px;
+      border-radius: 35px;
+      border: 1px solid var(--lt-border-color-opacity-twenty);
+    }
 
     .modal-card-ingr {
         display: flex;
@@ -125,13 +185,46 @@
         font-weight: 500;
     }
 
-    .modal-add-favorite,
+    @media screen and (min-width: 768px) {
+      .extra-modal-button{
+        gap: 16;
+        margin-top: 32px;
+      }
+    }
+
+.modal-add-favorite,
 .modal-give-rating {
   padding: 12px 24px;
   border-radius: 15px;
 }
 
-.modal-add-favorite {
-    color: #FFFFFF;
-    background-color: #9BB537;
+@media screen and (min-width: 768px) {
+  .modal-add-favorite,
+.modal-give-rating{
+  padding: 14px 28px;
 }
+}
+
+.modal-add-favorite :hover,
+.modal-add-favorite :focus {
+  color: var(--lt-text-color);
+ 
+}
+
+.modal-add-favorite {
+    color: var(--dt-text-color);
+    background-color:   var(--brand-color);
+    transition: color var(--transition), background-color var(--transition);
+}
+
+.modal-give-rating {
+  border: solid 1px var(--brand-color);
+  transition: color var(--transition), background-color var(--transition);
+}
+
+.modal-give-rating :hover,
+.modal-give-rating  :focus{
+  color: var(--dt-text-color);
+  background-color: var(--brand-color);
+}
+
