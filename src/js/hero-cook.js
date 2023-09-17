@@ -1,4 +1,4 @@
-import { fechCook } from './js/api/request-cook.js';
+import { fechCook } from '.api/request-cook.js';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         .join('');
       swiperContainer.insertAdjacentHTML('beforeend', swiperCard);
       const swiper = new Swiper('.events', {
-        modules: [Navigation, Pagination, Autoplay], // Include the modules you need
+        modules: [Navigation, Pagination, Autoplay],
         autoplay: {
-          delay: 5000, // Adjust the delay as needed
+          delay: 5000,
         },
         pagination: {
           el: '.slice',
