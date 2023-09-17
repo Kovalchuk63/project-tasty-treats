@@ -23,9 +23,9 @@ function toggleTheme() {
   localStorage.setItem('theme', targetTheme);
 }
 
-const toggles = document.querySelectorAll('.input-switcher');
+const toggles = document.querySelectorAll('.input-label'); // Змінено селектор на .input-label
 toggles.forEach(function (toggle) {
-  toggle.addEventListener('change', toggleTheme);
+  toggle.addEventListener('click', toggleTheme);
 });
 
 setThemeFromLocalStorage();

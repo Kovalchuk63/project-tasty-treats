@@ -1,16 +1,14 @@
-import './js/block-categories';
-import './js/header';
-import './js/hero';
-import './js/list-of-popular';
-import './js/list-of-recipes';
-import './js/modal-order';
-import './js/modal-rating';
-import './js/modal-recipe'
-import './js/favorite-page'
-import './js/API/order-post'
-<<<<<<< Updated upstream
-import './js/padination';
-import './js/switcher';
-=======
-import './js/pagination'
->>>>>>> Stashed changes
+import './js/block-categories.js';
+import './js/hero-cook.js';
+import './js/request-cook.js';
+import './js/header.js';
+import './js/hero.js';
+import './js/list-of-popular.js';
+import './js/list-of-recipes.js';
+import './js/modal-order.js';
+import './js/modal-rating.js';
+import './js/modal-recipe.js'
+import './js/favorite-page.js'
+import './js/API/order-post.js'
+import './js/switcher.js';
+import './js/pagination.js'
