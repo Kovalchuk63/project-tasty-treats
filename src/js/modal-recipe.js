@@ -32,7 +32,7 @@ refs.allCards.addEventListener('click', handlerGetIdCard);
 
 async function handlerGetIdCard(event) {
  
-  const buttonId = event.target.getAttribute('id');
+  const buttonId = refs.allCards.event.target.getAttribute('id');
   // refs.ratingButton.id = buttonId;
   refs.addToFavorite.id = buttonId;
   const dataById = await fetchCook(`${buttonId}`);
