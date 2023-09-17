@@ -8,3 +8,4 @@ import './js/modal-rating';
 import './js/modal-recipe'
 import './js/favorite-page'
 import './js/API/order-post'
+import './js/padination'
