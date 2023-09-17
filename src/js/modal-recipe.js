@@ -109,11 +109,13 @@ export function createMarkupModal(data) {
 
   return modalCardMarkup;
 }
+refs.recipeBtn.addEventListener('click', openModal)
 
-export function openModal() {
+
+ function openModal() {
   refs.modalButtonClose.addEventListener('click', closeModal);
   refs.modalBackdrop.addEventListener('click', closeModalOnBackdrop);
-  refs.recipeBtn.addEventListener('click', handleRecipeClick)
+  
   window.addEventListener('keydown', handleKeyDown);
   refs.modalBackdrop.classList.add('is-open');
   document.body.style.overflow = 'hidden';
@@ -146,16 +148,16 @@ export function closeModalOnBackdrop(event) {
     youtubeIframe.src = '';
   }
 }
-async function handleRecipeClick(event) {
-  if (!event.target.closest('div-popular-list')) {
-    return;
-  }
-  const clickedRecipe = event.target.closest('div-popular-list');
-  if (!clickedRecipe) return;
-  const recipeId = clickedRecipe.dataset.id;
-  const dataRecipe = await fetchCook(`${BASE_URL}/recipes/${recipeId}`);
-  modalCardCont.innerHTML = createMarkupModal(dataRecipe);
-  openModal();
-}
+// async function handleRecipeClick(event) {
+//   if (!event.target.closest('div-popular-list')) {
+//     return;
+//   }
+//   const clickedRecipe = event.target.closest('');
+//   if (!clickedRecipe) return;
+//   const recipeId = clickedRecipe.dataset.id;
+//   const dataRecipe = await fetchCook(`${BASE_URL}${recipeId}`);
+//   modalCardCont.innerHTML = createMarkupModal(dataRecipe);
+//   openModal();
+// }
 
 
