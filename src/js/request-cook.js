@@ -1,6 +1,6 @@
 const INT_COOK = 'https://tasty-treats-backend.p.goit.global/api/events';
 
-export async function fetchCook() {
+export async function fechCook() {
   try {
     const response = await fetch(INT_COOK);
     if (!response.ok) {

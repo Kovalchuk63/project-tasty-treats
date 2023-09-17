@@ -30,5 +30,4 @@ function createMarkupCard(arr) {
          </li>`;
               }).join('')}
             `;
-
-            }  
+ }  

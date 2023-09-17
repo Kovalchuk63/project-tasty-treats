@@ -3,20 +3,21 @@
 }
 .header-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .nav-link.current {
     color: var(--brand-color);
 }
 
 .nav-header {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     padding-top: 25px;
 }
 
 .logo-header {
+    padding-top: 27.5px;
     text-align: center;
     font-size: 16px;
     font-weight: 600;
@@ -63,6 +64,7 @@
     display: flex;
     align-items: center;
     gap: 14px;
+    padding-top: 24px;
 }
 
 .input-switcher[type='checkbox'] {
@@ -81,6 +83,7 @@
     display: block;
     border-radius: 18px;
     position: relative;
+    box-shadow: var(--shadow);
 }
 
 .input-label:after {
@@ -90,7 +93,7 @@
     left: 1px;
     width: 18px;
     height: 18px;
-    background: var(--lt-text-color);
+    background: var(--lt-background-color);
     border-radius: 18px;
     transition: 0.3s;
 }
@@ -166,10 +169,11 @@
 }
 
 .menu-container .menu-toggle {
+    color: var(--lt-background-color);
     position: absolute;
     top: 16px;
     right: 16px;
-    color: var(lt-text-color);
+   
 }
 
 .mobile-menu {
@@ -194,6 +198,7 @@
 
 /* Медіа запити */
 @media screen and (max-width: 767px) {
+    
     .nav-list {
         display: none;
     }
@@ -205,8 +210,12 @@
 
 @media screen and (min-width: 768px) {
     .nav-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         padding-top: 30px;
-    }
+        font-size: 12px;
+    }   
 
     .burger-menu {
         display: none;
@@ -236,7 +245,7 @@
     }
 
     .nav-link.active.link {
-        color: var(--brand-color);
+        color: var(--lt-text-color);
     }
 
     .shopping-icon:hover,
@@ -254,13 +263,16 @@
         line-height: 20px;
         letter-spacing: -0.72px;
     }
+    .logo-header {
+        padding-top: 40px;
+        }
+    
+    .header-btn-box {
+        padding-top: 42px;
+        }
 }
 
 @media screen and (min-width: 1280px) {
-    .nav-header {
-        padding-top: 42px;
-    }
-
     .header-btn-box {
         gap: 18px;
     }
