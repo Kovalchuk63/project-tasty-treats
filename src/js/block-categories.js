@@ -4,12 +4,18 @@ const selectorsCategories = {
   listCardRecipes: document.querySelector('.js-card-list'),
 };
 
+const defaultsValue = {
+  preview: '../img/no-image-icon-23485.png',
+  title: 'no title',
+  description: 'no description',
+  rating: 'xx',
+};
+
 selectorsCategories.categoriesBtnList.addEventListener(
   'click',
   handlerSearchBtn
 );
 
-// API categories btn
 serviseCategoriesBtn()
   .then(data =>
     selectorsCategories.categoriesBtnList.insertAdjacentHTML(
@@ -19,6 +25,7 @@ serviseCategoriesBtn()
   )
   .catch(error => console.log(error));
 
+// API categories btn
 async function serviseCategoriesBtn() {
   const BASE_URL = 'https://tasty-treats-backend.p.goit.global/api';
   const END_POINT = '/categories';
@@ -40,6 +47,8 @@ function createMarkupCategoriesBtn(arr) {
 }
 
 //==============================================================
+
+// Callback function - "click"
 function handlerSearchBtn(evt) {
   selectorsCategories.allCategoriesBtn.classList.remove(
     'all-categories-btn-active'
@@ -77,13 +86,13 @@ function createMarkupCategoriesRecipes(arr) {
         <use href="sprite.svg#icon-heart"></use>
       </svg>
       <div class="image-gradient">
-      <img class="card-img" src="${preview || defaults.preview}" alt="${
-        title || defaults.title
+      <img class="card-img" src="${preview || defaultsValue.preview}" alt="${
+        title || defaultsValue.title
       }"/>
       </div>
       <div class="card-text">
-      <h2 class="card-dish-name">${title || defaults.title}</h2>
-      <p class="card-dish-descr">${description || defaults.description}</p>
+      <h2 class="card-dish-name">${title || defaultsValue.title}</h2>
+      <p class="card-dish-descr">${description || defaultsValue.description}</p>
       </div>
       <div class="rating-btn-container">
         
