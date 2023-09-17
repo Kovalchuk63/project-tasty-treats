@@ -65,6 +65,7 @@
 .categories-btn {
   display: block;
   border: none;
+  padding: 0;
   background-color: transparent;
   color: rgba(5, 5, 5, 0.3);
   font-family: inherit;
@@ -73,6 +74,14 @@
   font-weight: 500;
   line-height: 1.28;
   transition: color var(--transition);
+}
+
+/* Tablet styles >=768px */
+@media only screen and (min-width: 768px) {
+  .categories-btn {
+    font-size: 16px;
+    line-height: 1.25;
+  }
 }
 
 /* Basic styles */
