@@ -80,7 +80,6 @@ body {
 }
 
 .name-popular {
-    text-transform: uppercase;
     color: var(--color-title-text);
     font-size: 18px;
     font-style: normal;
