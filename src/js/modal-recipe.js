@@ -16,12 +16,12 @@ async function fetchCook() {
 
 
 const refs = {
-  allCards: document.querySelector('.cards-list'),
+  allCards: document.querySelector('.div-popular-list'),
   modalCardCont: document.querySelector('.card-markup-modal'),
   modalBackdrop: document.querySelector('.modal-backdrop'),
   modalButtonClose: document.querySelector('.modal-btn-close'),
   giveRatingModalBtn: document.querySelector('.modal-give-rating'),
-  // ratingModal: document.querySelector('.rating-backdrop'),
+  //ratingModal: document.querySelector('.rating-backdrop'),
   // ratingButton: document.querySelector('.rating-send-btn'),
   // ratingClose: document.querySelector('.modal-rating-close'),
   addToFavorite: document.querySelector('.modal-add-favorite'),
@@ -30,19 +30,19 @@ const refs = {
 
 refs.allCards.addEventListener('click', handlerGetIdCard);
 
-// async function handlerGetIdCard(event) {
-//   if (event.target.nodeName !== 'BUTTON') {
-//     return;
-//   }
+async function handlerGetIdCard(event) {
+  if (event.target.nodeName !== 'BUTTON') {
+    return;
+  }
 
-//   const buttonId = event.target.getAttribute('id');
-//   refs.ratingButton.id = buttonId;
-//   refs.addToFavorite.id = buttonId;
-//   const dataById = await fetchCook(`${BASE_URL}${buttonId}`);
-//   const modalMarkup = createMarkupModal(dataById);
-//   refs.modalCardCont.innerHTML = modalMarkup;
-//   openModal();
-// }
+  const buttonId = event.target.getAttribute('id');
+  // refs.ratingButton.id = buttonId;
+  // refs.addToFavorite.id = buttonId;
+  const dataById = await fetchCook(`${BASE_URL}${buttonId}`);
+  const modalMarkup = createMarkupModal(dataById);
+  refs.modalCardCont.innerHTML = modalMarkup;
+  openModal();
+}
 
 export function createMarkupModal(data) {
   const youtubeLink = data.youtube;
