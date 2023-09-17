@@ -1,9 +1,9 @@
-import { fechCook } from './js/api/request-cook.js';
+import { fetchCook } from './js/api/request-cook.js';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 const swiperContainer = document.querySelector('.events');
 
-fechCook().then(data => {
+fetchCook().then(data => {
   const swiperCard = data
     .map(
       item => `

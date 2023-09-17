@@ -30,7 +30,7 @@
 
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1280px) {
 
     .div-popular-list {
         width: 155px;
@@ -50,7 +50,7 @@
     }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1280px) {
     .img-dish {
         width: 64px;
         height: 64px;
@@ -67,7 +67,7 @@
     line-height: 1.28;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .name-popular {
         font-style: normal;
         font-weight: 600;
@@ -113,7 +113,7 @@
     }
 }
 
-@media screen and (min-width:1200px) {
+@media screen and (min-width:1280px) {
     .popular-list {
         gap: 32px;
     }
