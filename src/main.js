@@ -8,5 +8,9 @@ import './js/modal-rating';
 import './js/modal-recipe'
 import './js/favorite-page'
 import './js/API/order-post'
+<<<<<<< Updated upstream
 import './js/padination';
 import './js/switcher';
+=======
+import './js/pagination'
+>>>>>>> Stashed changes
