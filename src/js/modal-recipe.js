@@ -21,9 +21,9 @@ const refs = {
   modalBackdrop: document.querySelector('.modal-backdrop'),
   modalButtonClose: document.querySelector('.modal-btn-close'),
   giveRatingModalBtn: document.querySelector('.modal-give-rating'),
- // ratingModal: document.querySelector('.rating-backdrop'),
- // ratingButton: document.querySelector('.rating-send-btn'),
- // ratingClose: document.querySelector('.modal-rating-close'),
+  // ratingModal: document.querySelector('.rating-backdrop'),
+  // ratingButton: document.querySelector('.rating-send-btn'),
+  // ratingClose: document.querySelector('.modal-rating-close'),
   addToFavorite: document.querySelector('.modal-add-favorite'),
   recipeBtn: document.querySelector('.recipe-btn'),
 };
@@ -34,7 +34,7 @@ refs.allCards.addEventListener('click', handlerGetIdCard);
 //   if (event.target.nodeName !== 'BUTTON') {
 //     return;
 //   }
- 
+
 //   const buttonId = event.target.getAttribute('id');
 //   refs.ratingButton.id = buttonId;
 //   refs.addToFavorite.id = buttonId;
@@ -93,7 +93,7 @@ export function createMarkupModal(data) {
       <div class="modal-general-inf">
       <div class="card-star-modal card_star-rating">
       <p class="modal-raiting cards-raiting">${roundedRating}</p>
-      <div class="starts-modal rating-wrapper">
+      <div class="starts-modal ">
   
 
 
@@ -110,10 +110,10 @@ export function createMarkupModal(data) {
   return modalCardMarkup;
 }
 
- export function openModal() {
+export function openModal() {
   refs.modalButtonClose.addEventListener('click', closeModal);
   refs.modalBackdrop.addEventListener('click', closeModalOnBackdrop);
-  refs.recipeBtn.addEventListener('click', handleRecipeClick )
+  refs.recipeBtn.addEventListener('click', handleRecipeClick)
   window.addEventListener('keydown', handleKeyDown);
   refs.modalBackdrop.classList.add('is-open');
   document.body.style.overflow = 'hidden';
@@ -122,10 +122,10 @@ export function createMarkupModal(data) {
 function handleKeyDown(event) {
   if (event.key === 'Escape') {
     closeModal();
-   // closeRatingModal();
+    // closeRatingModal();
   }
 }
- export function closeModal() {
+export function closeModal() {
   refs.modalButtonClose.removeEventListener('click', closeModal);
   refs.modalBackdrop.removeEventListener('click', closeModalOnBackdrop);
   window.removeEventListener('keydown', handleKeyDown);
@@ -135,7 +135,7 @@ function handleKeyDown(event) {
   youtubeIframe.src = '';
 }
 
- export function closeModalOnBackdrop(event) {
+export function closeModalOnBackdrop(event) {
   if (event && event.target === refs.modalBackdrop) {
     refs.modalButtonClose.removeEventListener('click', closeModal);
     refs.modalBackdrop.removeEventListener('click', closeModalOnBackdrop);
@@ -146,11 +146,16 @@ function handleKeyDown(event) {
     youtubeIframe.src = '';
   }
 }
-  async function handleRecipeClick() {
+async function handleRecipeClick(event) {
+  if (!event.target.closest('div-popular-list')) {
+    return;
+  }
+  const clickedRecipe = event.target.closest('div-popular-list');
+  if (!clickedRecipe) return;
   const recipeId = clickedRecipe.dataset.id;
   const dataRecipe = await fetchCook(`${BASE_URL}/recipes/${recipeId}`);
   modalCardCont.innerHTML = createMarkupModal(dataRecipe);
   openModal();
- }
+}
 
 
