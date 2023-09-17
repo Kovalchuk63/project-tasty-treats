@@ -1,4 +1,4 @@
-import { fechCook } from '.api/request-cook.js';
+import { fechCook } from '.request-cook.js';
 import Swiper, { Navigation, Pagination, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
 document.addEventListener('DOMContentLoaded', () => {
