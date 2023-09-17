@@ -1,12 +1,9 @@
-import sprite from '../sprite.svg'
+import sprite from '../sprite.svg';
 
 const categoriesBtn = document.querySelector('.js-all-categories-btn');
 const cardsList = document.querySelector('.js-card-list');
 
 categoriesBtn.addEventListener('click', onAllCategoryButtonClick);
-
-// categoriesBtn.classList.add('all-categories-btn-active');
-// categoriesBtn.classList.remove("all-categories-btn-active"); - Для Романа
 
 loadAllCategories();
 
@@ -31,10 +28,25 @@ async function categoriesCardsSearch() {
 }
 
 function allCategoriesMarkup(cards) {
-  console.log(cards);
-  
   const markup = cards.results
     .map(({ preview, title, description, rating }) => {
+      const ratedStars = calculationOfRatedStars(rating);
+      const ratedStarsArray = Array.from(
+        { length: ratedStars },
+        () =>
+          `<svg class="svg-star rated">
+          <use href="../sprite.svg#icon-Star"></use>
+        </svg>`
+      ).join('');
+
+      const notRatedStarsArray = Array.from(
+        { length: 5 - ratedStars },
+        () =>
+          `<svg class="svg-star">
+          <use href="../sprite.svg#icon-Star"></use>
+        </svg>`
+      ).join('');
+
       return `<li class="card-item">
           <svg class="card-svg-heart" width="22px" height="22px">
         <use href="../sprite.svg#icon-heart"></use>
@@ -52,21 +64,7 @@ function allCategoriesMarkup(cards) {
         
           <p class="rating-number">${rating}</p>
           <div class="rating-container">
-          <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
-          </svg>
-          <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
-          </svg>
-          <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
-          </svg>
-          <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
-          </svg>
-          <svg class="svg-star">
-            <use href="../sprite.svg#icon-Star"></use>
-          </svg>
+          ${ratedStarsArray}${notRatedStarsArray}
         </div>
         <button type="button" class="recipe-btn">See recipe</button>
       </div>
@@ -77,12 +75,10 @@ function allCategoriesMarkup(cards) {
 }
 
 function onAllCategoryButtonClick() {
-  // categoriesBtn.classList.add('all-categories-btn-active');
   categoriesCardsSearch()
     .then(cards => {
       const markup = allCategoriesMarkup(cards);
       cardsList.innerHTML = markup;
-      // categoriesBtn.blur();
     })
     .catch(() => {
       console.log('Error', error.message);
@@ -99,4 +95,9 @@ async function loadAllCategories() {
   }
 }
 
-// ======================================================
+// ============================START RATING====================
+
+function calculationOfRatedStars(rating) {
+  const ratedStars = Math.floor(rating / 2);
+  return ratedStars;
+}
