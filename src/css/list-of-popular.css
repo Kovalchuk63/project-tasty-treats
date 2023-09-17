@@ -1,51 +1,125 @@
-.img-dish {
-    width: 80px;
-    border-radius: 10px;
+.description-dish {
+    color: rgba(5, 5, 5, 0.8);
+    font-size: 12px;
+    line-height: 1.33;
+    width: 255px;
+    height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
 }
 
-@media screen and (max-width:768px) {
-    .img-dish {
-        width: 50px;
-        border-radius: 10px;
+.description-dish {
+    font-size: 10px;
+    line-height: 1.4;
+    width: 160px;
+}
+
+@media screen and (min-width:768px) {
+    .description-dish {
+        font-size: 10px;
+        line-height: 1.4;
+        width: 120px;
+        height: 41px;
     }
 }
 
 
-.name-popular {
-    /* font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 1.16; */
-    margin-bottom: 32px;
-    /* margin-left: 100px; */
+.div-popular-list {
+    margin-left: 16px;
+
 }
 
-@media screen and (max-width: 768px) {
-    .name-popular {}
+@media screen and (min-width:1200px) {
+
+    .div-popular-list {
+        width: 155px;
+    }
+}
+
+.img-dish {
+    width: 64px;
+    border-radius: 10px;
+    height: 64px;
+}
+
+@media screen and (min-width:768px) {
+    .img-dish {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .img-dish {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.name-popular {
+    text-transform: uppercase;
+    color: var(--color-title-text);
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.28;
+}
+
+@media screen and (min-width: 1200px) {
+    .name-popular {
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.16;
+    }
+}
+
+.name-dish {
+    color: var(--lt-text-color);
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.28;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+
+@media screen and (min-width:768px) {
+    .name-dish {
+        /* white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis; */
+        width: 50px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .popular-recipe-item:nth-last-child(-n+2) {
+        display: none;
+
+    }
+}
+
+.popular-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+@media screen and (min-width:768px) {
+    .popular-list {
+        gap: 16px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .popular-list {
+        gap: 32px;
+    }
 }
 
 .popular-recipe-item {
     display: flex;
     flex-direction: row;
-    margin-bottom: 30px;
-}
-
-
-.name-dish {}
-
-.description-dish {
-    padding-top: 10px;
-
-}
-
-@media screen and (min-width:768px) {
-    .description-dish {
-        font-size: 15px;
-    }
-}
-
-.div-popular-list {
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
 }

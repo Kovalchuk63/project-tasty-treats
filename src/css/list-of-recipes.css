@@ -81,7 +81,7 @@
   background: linear-gradient(1deg, rgba(5, 5, 5, 0.6), rgba(5, 5, 5, 0));
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .card-list {
     flex-direction: row;
     gap: 16px;
@@ -98,18 +98,12 @@
 
 @media screen and (min-width: 1280px) {
   .card-list {
-    flex-direction: row;
     width: 782px;
     column-gap: 16px;
     row-gap: 20px;
-    margin-bottom: 64px;
   }
 
-  .card-item {
-    width: 250px;
-    height: 287px;
-  }
-
+  .card-item,
   .card-img {
     width: 250px;
     height: 287px;
@@ -122,9 +116,15 @@
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1279px) {
+@media screen and (min-width: 768px) {
   .card-item:nth-last-child(-n + 1) {
     display: none;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .card-item:nth-last-child(-n + 1) {
+    display: block;
   }
 }
 

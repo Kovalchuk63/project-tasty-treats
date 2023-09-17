@@ -1,8 +1,10 @@
 /*
+<section class="container">
 <div class="swiper">
 <div class="events swiper-wrapper"></div>
-<div class="event"></div>
 </div>
+<div class="slice"></div>
+</section>
 
 <div class="swiper">
   <div class="swiper-wrapper"></div>
@@ -14,6 +16,46 @@
   display: flex;
 }
 
+.swiper-card {
+  display: flex;
+}
+
+.cook {
+  height: 442px;
+  width: 137px;
+}
+
+.plate-slide {
+  height: 442px;
+  width: 351px;
+}
+
+.plate {
+  display: block;
+  height: 271px;
+  width: 304px;
+}
+
+.plate-name {
+  font-size: 20px;
+  color: green;
+}
+
+.plate-sub {
+  font-size: 20px;
+  color: green;
+}
+
+.dish {
+  height: 442px;
+  width: 351px;
+}
+
+.slice {
+  width: 5px;
+  height: 5px;
+}
+/*
 .swiper-card {
   display: flex;
 }
@@ -41,3 +83,4 @@
 .dish {
   display: flex;
 }
+*/
