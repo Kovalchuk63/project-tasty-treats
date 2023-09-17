@@ -55,6 +55,18 @@
   width: 5px;
   height: 5px;
 }
+
+.swiper {
+  width: 50px;
+  height: 50px;
+  border: red 5px solid;
+}
+
+.swiper-slide {
+  width: 50px;
+  height: 50px;
+  border: blue 5px solid;
+}
 /*
 .swiper-card {
   display: flex;
