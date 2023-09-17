@@ -68,7 +68,14 @@ body {
         text-overflow: ellipsis;
         overflow-wrap: break-word;
         line-height: 1.2;
-        width: 136px;
+        width: 152px;
+    }
+}
+
+
+@media screen and (min-width:768px) and (max-width:1280px) {
+    .name-dish {
+        width: 122px;
     }
 }
 
