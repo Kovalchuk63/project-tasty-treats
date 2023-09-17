@@ -75,7 +75,7 @@ body {
 
 @media screen and (min-width:768px) and (max-width:1280px) {
     .name-dish {
-        width: 122px;
+        width: 100px;
     }
 }
 
