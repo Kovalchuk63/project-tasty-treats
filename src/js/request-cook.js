@@ -1,8 +1,8 @@
-const INT_COOK = 'https://tasty-treats-backend.p.goit.global/api/events';
+const API_URL = 'https://tasty-treats-backend.p.goit.global/api/events';
 
-export async function fechCook() {
+export async function fetchCook() {
   try {
-    const response = await fetch(INT_COOK);
+    const response = await fetch(API_URL);
     if (!response.ok) {
       throw new Error(`Код: ${response.status}`);
     }
