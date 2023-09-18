@@ -30,10 +30,9 @@ const refs = {
 
 refs.allCards.addEventListener('click', handlerGetIdCard);
 
-async function handlerGetIdCard(event) {
+async function handlerGetIdCard() {
  
   const buttonId = refs.allCards.event.target.getAttribute('id');
-  // refs.ratingButton.id = buttonId;
   refs.addToFavorite.id = buttonId;
   const dataById = await fetchCook(`${buttonId}`);
   const modalMarkup = createMarkupModal(dataById);
@@ -160,41 +159,4 @@ export function closeModalOnBackdrop(event) {
 
 } 
 
-//Add to favorite
-
-
-
-refs.addToFavorite.addEventListener('click', addToLocalStorage);
-
-async function addToLocalStorage() {
-  const addButtonId = refs.addToFavorite.getAttribute('id');
-  const recipeData = await fetchCook(`${addButtonId}`);
-
-  const { category, description, preview, rating, title, _id } = recipeData;
-
-  const recipeObject = {
-    category,
-    description,
-    preview,
-    rating: rating.toFixed(1),
-    title,
-    _id,
-  };
-
-  let savedData = localStorage.getItem('localRecipes');
-  savedData = savedData ? JSON.parse(savedData) : [];
-
-  const existingRecipeIndex = savedData.findIndex(data => data._id === _id);
-
-  if (existingRecipeIndex !== -1) {
-    savedData.slice(existingRecipeIndex, 1);
-   
-    refs.addToFavorite.textContent = 'Add to favorite';
-  } else {
-    savedData.push(recipeObject);
-   
-    refs.addToFavorite.textContent = 'Remove favorite';
-  }
-  localStorage.setItem('localRecipes', JSON.stringify(savedData));
-}
 
