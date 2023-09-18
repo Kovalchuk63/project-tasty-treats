@@ -1,11 +1,11 @@
-import { fechCook } from './API/request-cook.js';
+import { fetchCook } from './API/request-cook.js';
 
-import SwiperCore from 'swiper/core';
+import SwiperCore, { Navigation, Pagination } from 'swiper/core';
 /* import 'swiper/swiper-bundle.min.css'; */
 
 const swiperContainer = document.querySelector('.events');
 
-fechCook().then(data => {
+fetchCook().then(data => {
   const swiperCard = data
     .map(
       item => `
@@ -25,7 +25,7 @@ fechCook().then(data => {
 
   swiperContainer.innerHTML = swiperCard;
 
-  const swiper = new SwiperCore('.events', {
+  const swiper = new SwiperCore(swiperContainer, {
     modules: [Navigation, Pagination],
     pagination: {
       el: '.page',
