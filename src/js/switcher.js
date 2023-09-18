@@ -23,7 +23,7 @@ function toggleTheme() {
   localStorage.setItem('theme', targetTheme);
 }
 
-const toggles = document.querySelectorAll('.input-label'); // Змінено селектор на .input-label
+const toggles = document.querySelectorAll('.input-label'); 
 toggles.forEach(function (toggle) {
   toggle.addEventListener('click', toggleTheme);
 });

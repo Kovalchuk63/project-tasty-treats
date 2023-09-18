@@ -1,0 +1,18 @@
+:root[data-theme='light'] {
+    --lt-background-color: rgba(248, 248, 248, 1);
+    --lt-text-color: rgba(5, 5, 5, 1);
+    --lt-border-color-opacity-twenty: rgba(5, 5, 5, 0.2);
+    --lt-text-color-opacity-thirty: rgba(5, 5, 5, 0.3);
+    --lt-text-color-opacity-fifty: rgba(5, 5, 5, 0.5);
+    --lt-text-color-opacity-sixty: rgba(248, 248, 248, 0.6);
+    --lt-text-color-opacity-eighty: rgba(5, 5, 5, 0.8);
+}
+:root[data-theme='dark'] {
+    --dt-background-color: rgba(22, 22, 22, 1);
+    --dt-text-color: rgba(255, 255, 255, 1);
+    --dt-border-color-opacity-twenty: rgba(255, 255, 255, 0.2);
+    --dt-text-color-opacity-thirty: rgba(255, 255, 255, 0.3);
+    --dt-text-color-opacity-fifty: rgba(255, 255, 255, 0.5);
+    --dt-text-color-opacity-sixty: rgba(255, 255, 255, 0.6);
+    --dt-text-color-opacity-eighty: rgba(255, 255, 255, 0.8);
+}

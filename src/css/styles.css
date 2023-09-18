@@ -20,6 +20,7 @@
 @import url('./favorite-page.css');
 @import url('./search.css');
 @import url('./pagination.css');
+@import url('./switcher.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
