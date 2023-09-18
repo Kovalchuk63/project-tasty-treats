@@ -2,7 +2,7 @@ select {
     -webkit-appearance: none;
 }
 .search {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 .search-container {
     display: flex;
