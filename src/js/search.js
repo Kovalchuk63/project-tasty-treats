@@ -1,6 +1,4 @@
-import debounce from 'lodash.debounce';
-import { searchOnTitle } from '../utils/request-cook.js';
-import Notiflix, { Loading } from 'notiflix';
+
 
 const searchInput = document.querySelector(".search-input")
 const time = document.querySelector(".time")
