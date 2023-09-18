@@ -2,7 +2,6 @@ import './js/block-categories.js';
 import './js/hero-cook.js';
 import './js/request-cook.js';
 import './js/header.js';
-import './js/hero.js';
 import './js/list-of-popular.js';
 import './js/list-of-recipes.js';
 import './js/modal-order.js';
