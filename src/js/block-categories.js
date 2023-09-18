@@ -1,3 +1,5 @@
+import sprite from '../sprite.svg';
+
 const selectorsCategories = {
   allCategoriesBtn: document.querySelector('.js-all-categories-btn'),
   categoriesBtnList: document.querySelector('.js-categories-btn-card'),
@@ -130,7 +132,7 @@ function createMarkupCategoriesRecipes(arr) {
         { length: ratedStars },
         () =>
           `<svg class="svg-star rated">
-          <use href="../sprite.svg#icon-Star"></use>
+          <use href="${sprite}#icon-Star"></use>
         </svg>`
       ).join('');
 
@@ -138,13 +140,13 @@ function createMarkupCategoriesRecipes(arr) {
         { length: 5 - ratedStars },
         () =>
           `<svg class="svg-star">
-          <use href="../sprite.svg#icon-Star"></use>
+          <use href="${sprite}#icon-Star"></use>
         </svg>`
       ).join('');
 
       return `<li class="card-item">
           <svg class="card-svg-heart" width="22px" height="22px">
-        <use href="../sprite.svg#icon-heart"></use>
+        <use href="${sprite}#icon-heart"></use>
       </svg>
       <div class="image-gradient">
       <img class="card-img" src="${preview || defaultsValue.preview}" alt="${
