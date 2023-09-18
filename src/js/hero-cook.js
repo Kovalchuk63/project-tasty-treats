@@ -1,7 +1,7 @@
 import { fetchCook } from './request-cook.js';
 
-import SwiperCore, { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.min.css';
+import swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules'
 
 const swiperContainer = document.querySelector('.events');
 
@@ -25,7 +25,7 @@ fetchCook().then(data => {
 
   swiperContainer.innerHTML = swiperCard;
 
-  const swiper = new SwiperCore(swiperContainer, {
+  const Swiper = new swiper(swiperContainer, {
     modules: [Navigation, Pagination],
     pagination: {
       el: '.page',
