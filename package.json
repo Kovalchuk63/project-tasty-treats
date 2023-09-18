@@ -19,7 +19,6 @@
     "notiflix": "^3.2.6",
     "simplelightbox": "^2.14.2",
     "swiper": "^10.2.0",
-    "swiper-bundle": "^0.0.1-security",
     "tui-pagination": "^3.4.1",
     "vite-plugin-full-reload": "^1.0.5",
     "vite-plugin-html-inject": "^1.0.1"
