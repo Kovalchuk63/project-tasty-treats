@@ -1,4 +1,4 @@
-import { fetchCook } from './API/request-cook.js';
+import { fetchCook } from './request-cook.js';
 
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import 'swiper/swiper-bundle.min.css';
