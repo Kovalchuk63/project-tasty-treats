@@ -1,11 +1,11 @@
-import { fechCook } from '/js/api/requstCook.js';
+import { fetchCook } from './API/request-cook.js';
 
-import Swiper, { Navigation, Pagination } from 'swiper';
-import 'swiper/swiper-bundle.min.css';
+import Swiper from 'swiper/bundle';
+import { Navigation, Pagination } from 'swiper/modules'
 
 const swiperContainer = document.querySelector('.events');
 
-fechCook().then(data => {
+fetchCook().then(data => {
   const swiperCard = data
     .map(
       item => `
@@ -27,7 +27,6 @@ fechCook().then(data => {
 
   const swiper = new Swiper('.swiper', {
     modules: [Navigation, Pagination],
-    allowSlideNext: true,
     pagination: {
       el: '.page',
       clickable: true,
