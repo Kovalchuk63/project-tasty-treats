@@ -1,7 +1,7 @@
 import { fetchCook } from './API/request-cook.js';
 
-import SwiperCore, { Navigation, Pagination } from 'swiper/core';
-/* import 'swiper/swiper-bundle.min.css'; */
+import SwiperCore, { Navigation, Pagination } from 'swiper';
+import 'swiper/swiper-bundle.min.css';
 
 const swiperContainer = document.querySelector('.events');
 
