@@ -16,7 +16,7 @@ async function fetchCook() {
 
 
 const refs = {
-  allCards: document.querySelector('.card-list'),
+  allCards: document.querySelector('.js-popular-recipes'),
   modalCardCont: document.querySelector('.card-markup-modal'),
   modalBackdrop: document.querySelector('.modal-backdrop'),
   modalButtonClose: document.querySelector('.modal-btn-close'),
@@ -49,7 +49,7 @@ async function handleRecipeClick() {
   if (!clickedRecipe) return;
   const recipeId = clickedRecipe.dataset.id;
   const dataRecipe = await fetchCook(`${recipeId}`);
-  modalCardCont.innerHTML = createMarkupModal(dataRecipe);
+  refs.modalCardCont.innerHTML = createMarkupModal(dataRecipe);
   openModal();
 }
 
